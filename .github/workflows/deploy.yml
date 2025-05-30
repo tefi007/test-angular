@@ -1,4 +1,4 @@
-name: parcel CI/CD
+name: angular CI/CD
 
 on:
   push:
