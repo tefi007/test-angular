@@ -1,0 +1,5 @@
+<form class="form" [formGroup]="form">
+	<input type="text" placeholder="Заголовок" [formControl]="form.controls.title">
+	<textarea placeholder="Описание" [formControl]="form.controls.description"></textarea>
+	<button type="submit" [disabled]="!form.valid">Создать</button>
+</form>

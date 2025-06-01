@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-page-info',
+  selector: 'app-notes-list',
   imports: [],
-  templateUrl: './page-info.html',
-  styleUrl: './page-info.scss',
+  templateUrl: './notes-list.html',
+  styleUrl: './notes-list.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PageInfo {
+export class NotesList {
 
 }

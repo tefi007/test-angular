@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-page-error',
+  selector: 'app-note',
   imports: [],
-  templateUrl: './page-error.html',
-  styleUrl: './page-error.scss',
+  templateUrl: './note.html',
+  styleUrl: './note.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PageError {
+export class Note {
 
 }
