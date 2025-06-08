@@ -28,7 +28,7 @@ export class FormCreateNote {
     const note = {
       title: this.form.value.title || '',
       description: this.form.value.description || ''
-    }
+    };
 
     this.form.reset();
 
