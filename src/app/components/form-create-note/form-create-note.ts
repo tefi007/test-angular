@@ -3,6 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { take } from 'rxjs';
 import { NotesApiService } from '../../services/notes-api.service';
+import { NotesService } from '../../services/notes.service';
 
 @Component({
   selector: 'app-form-create-note',
@@ -20,7 +21,7 @@ export class FormCreateNote {
   });
 
   constructor(
-    private readonly _notesApiService: NotesApiService,
+    private readonly _notesService: NotesService,
     private readonly _destroyRef: DestroyRef
   ) { }
 
@@ -32,7 +33,7 @@ export class FormCreateNote {
 
     this.form.reset();
 
-    this._notesApiService.create(note)
+    this._notesService.create(note)
       .pipe(
         takeUntilDestroyed(this._destroyRef), // отписать от подписки при уничтожении компонента
         take(1) // отписать, если поток ответил первый раз

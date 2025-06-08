@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Note } from '../../models';
 
 @Component({
   selector: 'app-note',
@@ -7,6 +8,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './note.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Note {
-
+export class NoteComponent {
+	@Input({ required: true }) note!: Note;
 }

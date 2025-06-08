@@ -1,1 +1,13 @@
-<p>notes-list works!</p>
+@if (notes$ | async; as notes) {
+	@if (notes.length === 0) {
+		Заметок нет
+	} @else {
+
+		<div class="notes">
+			@for (note of notes; track note.id) {
+				<app-note [note]="note"></app-note>
+			}
+		</div>
+
+	}
+}
